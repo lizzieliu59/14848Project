@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hadoop
+  labels:
+    app: app-hadoop
+spec:
+  selector:
+    matchLabels:
+      app: app-hadoop
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: app-hadoop
+    spec:
+      containers:
+        - image: yueliu14848/hadoop
+          imagePullPolicy: Always
+          name: hadoop-multinode
+          ports:
+            - containerPort: 50070
+          securityContext:
+            privileged: true

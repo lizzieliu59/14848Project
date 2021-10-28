@@ -69,15 +69,7 @@ kubectl apply -f terminal-deployment.yaml
 2. Use `kubectl exec -it terminalapp-85c5d5ff8f-fxk7n  -- /bin/bash ` to access the terminal of the pod and execute `python3 app.py`
 3. Follow the instructions and enter the number of application you want to use. For example, if you want to use Apache Hadoop, then you can type 1 and hit "Return". It will pop out the URL of the service that you can use directory. The example is shown below:
 
-![Screen Shot 2021-10-28 at 12 51 39 AM](https://user-images.githubusercontent.com/53706052/139189109-87ea56c7-55bc-4684-a66b-62cc52530def.png)
-
-## Screenshots of services running in the k8s cluster
-From kubectl:
-![Screen Shot 2021-10-28 at 12 51 05 AM](https://user-images.githubusercontent.com/53706052/139189177-12ab1174-eabf-4019-8e7f-e0bf61ad41cf.png)
-
-From GCP:
-<img width="1438" alt="Screen Shot 2021-10-28 at 12 53 32 AM" src="https://user-images.githubusercontent.com/53706052/139189266-6604656f-f758-420f-8136-84447f7f4722.png">
-
+![Screen Shot 2021-10-27 at 11.59.20 PM](/Users/liuyue/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-27%20at%2011.59.20%20PM.png)
 
 ## Docker Images used
 

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: terminalapp
+  labels:
+    app: app-terminalapp
+spec:
+  selector:
+    matchLabels:
+      app: app-terminalapp
+  replicas: 1
+  minReadySeconds: 15
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: app-terminalapp
+    spec:
+      containers:
+        - image: yueliu14848/terminalapp
+          imagePullPolicy: Always
+          name: terminalapp
+          ports:
+            - containerPort: 6666
