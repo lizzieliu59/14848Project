@@ -4,7 +4,7 @@
 
 ### Cluster Setup
 
-1. Create a GCP cluster using:
+1. Create a GCP cluster using the following command, this will create a kubernete cluster in zone us-east-1-d with 1 machine node and custom machine type:
 
 ```
 gcloud container clusters create cloud848 --zone=us-east1-d --num-nodes=1 --machine-type=custom-4-12288
@@ -19,8 +19,11 @@ gcloud container clusters get-credentials cloud848 --zone=us-east1-d
 3. Make sure your kubernete cluster is the cluster you created (e.g. cloud848) using:
 
 ```
-kubectl config get-contexts 
+kubectl config get-contexts
+kubectl config use-context my-cluster-name 
 ```
+![Screen Shot 2021-11-25 at 2 31 32 PM](https://user-images.githubusercontent.com/53706052/143494046-c1bb05d0-5c32-4532-baa8-0a3520142452.png)
+
 
 ### Reserve Static IP
 
@@ -63,13 +66,17 @@ kubectl apply -f spark-deployment.yaml
 kubectl apply -f terminal-deployment.yaml
 ```
 
+After the the above operations, you will have the following deployments, serivces and corresponding pods:
+
+![Screen Shot 2021-11-25 at 2 36 07 PM](https://user-images.githubusercontent.com/53706052/143493983-f2d366cd-9622-492c-950f-78ab6b14b1ff.png)
+
 ### Way to use it
 
 1. Use `kubectl get pods` to know which pod the terminal app is running.
 2. Use `kubectl exec -it terminalapp-85c5d5ff8f-fxk7n  -- /bin/bash ` to access the terminal of the pod and execute `python3 app.py`
 3. Follow the instructions and enter the number of application you want to use. For example, if you want to use Apache Hadoop, then you can type 1 and hit "Return". It will pop out the URL of the service that you can use directory. The example is shown below:
 
-![Screen Shot 2021-10-27 at 11.59.20 PM](/Users/liuyue/Library/Application%20Support/typora-user-images/Screen%20Shot%202021-10-27%20at%2011.59.20%20PM.png)
+![143492902-48dda438-3d72-43b4-978a-48720d92293a](https://user-images.githubusercontent.com/53706052/143493930-13189c39-d569-40e4-b804-2636425acc31.png)
 
 ## Docker Images used
 
