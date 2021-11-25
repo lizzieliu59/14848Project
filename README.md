@@ -1,5 +1,6 @@
 # 14848 Project
 
+Code walk through and demo of the application's functionalities: https://drive.google.com/file/d/1rNwCObuCg8-7-0_LZUPrIH_R0YPK0aNh/view?usp=sharing
 ## Steps
 
 ### Cluster Setup
