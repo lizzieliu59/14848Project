@@ -48,7 +48,7 @@ kubectl apply -f jupyter-service.yaml
     1. Execute `kubectl apply -f hadoop-deployment.yaml`
     2. Use `kubectl get pods` to get the pod name with hadoop. (e.g. hadoop-686765c6cd-4xcqt)
     3. Use `kubectl exec -it hadoop-686765c6cd-4xcqt  -- /bin/sh` access the shell of the hadoop node.
-    4. Run `chmod +x ./conf/run.sh` and wait for the bash file finshes executing, this will make the Docker image running in the container.
+    4. Run `chmod +x ./hadoop/run.sh` and wait for the bash file finshes executing, this will make the Docker image running in the container.
     5. Exit the node and execute `kubectl apply -f hadoop-service.yaml`
 
 4. Deploy Apache Spark using:
