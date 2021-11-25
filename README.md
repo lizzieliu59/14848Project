@@ -9,6 +9,9 @@
 ```
 gcloud container clusters create cloud848 --zone=us-east1-d --num-nodes=1 --machine-type=custom-4-12288
 ```
+After execute this command, you could see the kubernetes cluster in Google console:
+
+![Screen Shot 2021-11-25 at 2 46 40 PM](https://user-images.githubusercontent.com/53706052/143494467-7f71d0ff-f0c8-4036-8680-ae6010fd4132.png)
 
 2. In the local environment, make sure the kubernete is installed. Use the command to authenticate with CGP:
 
