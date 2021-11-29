@@ -5,7 +5,7 @@ Code walk through and demo of the application's functionalities: https://drive.g
 
 ### Cluster Setup
 
-1. Create a GCP cluster using the following command, this will create a kubernete cluster in zone us-east-1-d with 1 machine node and custom machine type:
+1. Create a GCP cluster using the following command, this will create a kubernete cluster in zone us-east-1-d with 1 machine node and custom machine type (adopted from 15619course):
 
 ```
 gcloud container clusters create cloud848 --zone=us-east1-d --num-nodes=1 --machine-type=custom-4-12288
